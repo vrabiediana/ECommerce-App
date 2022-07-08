@@ -6,7 +6,12 @@ import {ProductService} from "../product.service";
 @Component({
   selector: 'app-products-list',
   template: `
-    <h2>Products</h2>
+    <div class="card text-center pt-5">
+        <div class="card-title ">
+            <h1 class="card-title">Products</h1>
+        </div>
+
+    </div>
     <ul>
         <app-product-item *ngFor="let product of products | async" [product]="product"></app-product-item>
     </ul>
