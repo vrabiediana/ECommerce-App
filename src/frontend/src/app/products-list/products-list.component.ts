@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {map, Observable} from "rxjs";
-import {Product} from "../product";
-import {ProductService} from "../product.service";
+import {Product} from "../interfaces/product";
+import {ProductService} from "../services/product.service";
 
 @Component({
   selector: 'app-products-list',
   template: `
-    <div class="card text-center pt-5">
+    <div class="card text-center pt-4">
         <div class="card-title ">
             <h1 class="card-title">Products</h1>
         </div>

@@ -11,7 +11,10 @@ import {Component} from '@angular/core';
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/products">Products</a>
+            <a class="nav-link"
+               routerLink="/products"
+               routerLinkActive="active"
+               ariaCurrentWhenActive="page">Products</a>
           </li>
         </ul>
       </div>
@@ -21,14 +24,19 @@ import {Component} from '@angular/core';
             <a class="nav-link" href="/login">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/signup">Sign Up</a>
+            <a class="nav-link"
+               routerLink="/signup"
+               routerLinkActive="active"
+               ariaCurrentWhenActive="page">Sign Up</a>
           </li>
         </ul>
       </div>
     </nav>
-    <app-products-list></app-products-list>
+    <router-outlet></router-outlet>
   `
 })
+
 export class AppComponent {
   title = 'frontend';
+
 }
