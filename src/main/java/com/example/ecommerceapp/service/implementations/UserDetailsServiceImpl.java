@@ -31,11 +31,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<Customer> optionalCustomer = customerRepository.findCustomerByUsernameEquals(username);
+        Optional<Customer> optionalCustomer = customerRepository.findCustomerByUsername(username);
         if (optionalCustomer.isPresent()) {
             return new UserDetailsImpl(optionalCustomer.get());
         }
-        Optional<Admin> optionalAdmin = adminRepository.findAdminByUsernameEquals(username);
+        Optional<Admin> optionalAdmin = adminRepository.findAdminByUsername(username);
         if(optionalAdmin.isPresent()) {
             return new UserDetailsImpl(optionalAdmin.get());
         }
